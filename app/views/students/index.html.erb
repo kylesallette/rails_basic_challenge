@@ -7,8 +7,8 @@
   <head>
   </head>
   <body>
-    <strong>All Students</strong>
     <div class="container">
+      <strong>All Students</strong>
       <% @students.each do |student| %>
       <ul><%= student.name %></ul>
         <%= link_to student.name, student_path(student) %>
