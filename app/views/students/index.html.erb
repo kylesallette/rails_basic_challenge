@@ -1,0 +1,17 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <%= link_to "View all Students",  students_path(@student) %>
+    <%= link_to "Create new student",  new_student_path(@student) %>
+
+    <div class="container">
+      <strong>All Students</strong>
+      <% @students.each do |student| %>
+      <ul><%= student.name %></ul>
+        <%= link_to student.name, student_path(student) %>
+    <%= link_to "Delete", student_path(student), method: "delete" %>
+    <% end %>
+  </div>
+</body>
+</html>
