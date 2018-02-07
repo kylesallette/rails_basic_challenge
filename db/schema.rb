@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180207202544) do
+ActiveRecord::Schema.define(version: 20180207224216) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.bigint "number"
+  end
 
   create_table "students", force: :cascade do |t|
     t.text "name"
+    t.integer "address_id"
+    t.index ["address_id"], name: "index_students_on_address_id"
   end
 
 end

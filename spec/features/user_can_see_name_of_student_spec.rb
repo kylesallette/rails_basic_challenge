@@ -40,3 +40,13 @@ require "rails_helper"
       end
     end
   end
+  describe "as a user" do
+    describe "when they click delete" do
+      it "That student is deleted" do
+        @student = Student.create!(name: "Kyle")
+        visit students_path
+        click_link('Delete')
+         page.should have_no_content('Kyle')
+       end
+     end
+   end 
