@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 STUDENTS = ["kyle", "bob", "sal", "mike", "zack", "ingago", "mary", "anan"]
-
+Addresses = [12345, 54321, 12356, 12346, 12348, 12349, 12340, 12342]
 
 STUDENTS.each do |name|
   student = Student.create!(name: name)
