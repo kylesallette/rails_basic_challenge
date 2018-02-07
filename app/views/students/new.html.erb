@@ -1,3 +1,8 @@
+<%= link_to "Create a new category",  new_category_path(@category) %>
+<%= link_to "View all Categories",  categories_path(@categories) %>
+
+
+
 <%= form_for @student do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>

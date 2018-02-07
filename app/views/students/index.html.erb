@@ -1,5 +1,18 @@
-<strong>All Students</strong>
+<%= link_to "Create a new category",  new_category_path(@category) %>
+<%= link_to "View all Categories",  categories_path(@categories) %>
 
-<% @students.each do |student| %>
-  <ul><%= student.name %></ul>
-<% end %>
+
+
+<html>
+  <head>
+  </head>
+  <body>
+    <strong>All Students</strong>
+    <div class="container">
+      <% @students.each do |student| %>
+      <ul><%= student.name %></ul>
+    <%= link_to "Delete", student_path(student), method: "delete" %>
+    <% end %>
+  </div>
+</body>
+</html>
